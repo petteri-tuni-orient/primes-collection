@@ -2,13 +2,13 @@
 
 A compiled command-line version using the same trial-division algorithm as the Python and JavaScript versions. Requires a C compiler and a POSIX system (such as Linux or macOS) for the monotonic timer. No external libraries.
 
-From the project root:
+From the C root:
 
 ```sh
 make -C c
-./c/primes          # Default limit: 10,000
-./c/primes 100000   # Custom inclusive upper limit
-./c/primes --help
+./primes          # Default limit: 10,000
+./primes 100000   # Custom inclusive upper limit
+./primes --help
 ```
 
 Or compile directly:

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prime numbers · Browser & server</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">ONE FUNCTION · TWO PLACES TO RUN</p>
+    <h1>Where do the primes happen?</h1>
+    <p class="intro">Run the same JavaScript in your browser or on a Node.js server. Compare the results and the time it takes.</p>
+    <section class="controls" aria-label="Calculation settings">
+      <label for="limit">Find prime numbers from 1 up to</label>
+      <input id="limit" type="number" min="1" max="1000000" step="1" value="10000" required aria-describedby="limit-help">
+      <p id="limit-help">Choose a whole number from 1 to 1,000,000. A prime is greater than 1 and divisible only by 1 and itself.</p>
+      <div class="buttons">
+        <button id="browser-run" type="button">Run in browser</button>
+        <button id="server-run" type="button">Run on server</button>
+      </div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <div class="results">
+      <section class="result" aria-labelledby="browser-title">
+        <p class="tag">YOUR DEVICE</p><h2 id="browser-title">Browser</h2>
+        <div id="browser-result" aria-live="polite"><p class="empty">Run a calculation to see the results.</p></div>
+      </section>
+      <section class="result" aria-labelledby="server-title">
+        <p class="tag">NODE.JS + EXPRESS</p><h2 id="server-title">Server</h2>
+        <div id="server-result" aria-live="polite"><p class="empty">Run a calculation to see the results.</p></div>
+      </section>
+    </div>
+    <aside><h2>Same code. Different location.</h2><p>Both buttons use <a href="/shared/primes.js">shared/primes.js</a>. The browser calls the function directly; the server button sends an HTTP request to Express, which runs that function in Node.js.</p><p>Calculation time measures the function call. Total request time also includes communication and response handling. Small calculations can finish in less than a millisecond; timings vary between runs. Larger browser calculations may briefly pause the page.</p></aside>
+  </main>
+</body>
+</html>

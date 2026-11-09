@@ -1,0 +1,19 @@
+flowchart TD
+    Start([Start]) --> Input[Receive upper limit]
+    Input --> Valid{Whole number from 1 to 1000000?}
+    Valid -->|No| Error[Report invalid limit]
+    Error --> End([End])
+    Valid -->|Yes| Init[Create empty primes list]
+    Init --> Candidate[Set candidate to 2]
+    Candidate --> WithinLimit{Candidate at most limit?}
+    WithinLimit -->|No| Return[Return primes list]
+    Return --> End
+    WithinLimit -->|Yes| Divisor[Set divisor to 2]
+    Divisor --> CheckDivisor{Divisor squared at most candidate?}
+    CheckDivisor -->|No| Add[Add candidate to primes list]
+    Add --> NextCandidate[Increase candidate by 1]
+    CheckDivisor -->|Yes| Divisible{Candidate divisible by divisor?}
+    Divisible -->|Yes| NextCandidate
+    Divisible -->|No| NextDivisor[Increase divisor by 1]
+    NextDivisor --> CheckDivisor
+    NextCandidate --> WithinLimit

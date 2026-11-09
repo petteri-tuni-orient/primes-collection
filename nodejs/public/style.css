@@ -1,0 +1,31 @@
+:root { font-family: system-ui, sans-serif; color: #182c35; background: #f3f6f5; line-height: 1.6; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 960px; margin: 0 auto; padding: 64px 24px; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; letter-spacing: -.04em; margin: 12px 0 20px; }
+h2 { margin: 0 0 16px; font-size: 1.4rem; }
+h3 { margin: 24px 0 8px; font-size: .9rem; }
+p { margin: 8px 0; }
+.eyebrow, .tag { font-size: .75rem; letter-spacing: .12em; font-weight: 700; color: #27665c; }
+.intro { max-width: 650px; color: #52636b; font-size: 1.1rem; }
+.controls { background: white; padding: 28px; margin: 32px 0 24px; border: 1px solid #dce4e1; border-radius: 14px; }
+label { display: block; font-weight: 650; margin-bottom: 8px; }
+input { font: inherit; padding: 10px 14px; border: 1px solid #9baea8; border-radius: 6px; width: min(100%, 260px); }
+#limit-help { font-size: .85rem; color: #52636b; margin-top: 10px; }
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+button { font: inherit; font-weight: 650; padding: 11px 20px; background: #155f52; color: white; border: 2px solid #155f52; border-radius: 7px; cursor: pointer; }
+#server-run { color: #155f52; background: white; }
+button:hover { filter: brightness(.9); }
+button:disabled { opacity: .55; cursor: wait; }
+:focus-visible { outline: 3px solid #ca8519; outline-offset: 4px; }
+#status { min-height: 1.6em; margin-bottom: 0; font-size: .9rem; }
+.results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.result { padding: 28px; background: white; border: 1px solid #dce4e1; border-radius: 14px; }
+.count { font-size: 3rem; font-weight: 750; line-height: 1.2; letter-spacing: -.04em; }
+.empty { color: #617079; }
+.timing { font-family: ui-monospace, monospace; font-size: .9rem; }
+.primes { font-family: ui-monospace, monospace; overflow-wrap: anywhere; color: #27665c; }
+aside { margin-top: 32px; padding: 8px 4px; color: #52636b; font-size: .9rem; }
+aside h2 { color: #182c35; font-size: 1.1rem; }
+a { color: #155f52; }
+@media (max-width: 600px) { main { padding: 32px 16px; } .results { grid-template-columns: 1fr; } .controls, .result { padding: 22px; } }
