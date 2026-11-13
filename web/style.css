@@ -1,4 +1,4 @@
-:root { font-family: system-ui, sans-serif; color: #182c35; background: #f3f6f5; line-height: 1.6; }
+:root { font-family: system-ui, sans-serif; color: #182c35; background: #e3743e36; line-height: 1.6; }
 * { box-sizing: border-box; }
 body { margin: 0; }
 main { max-width: 960px; margin: 0 auto; padding: 64px 24px; }
