@@ -42,7 +42,7 @@ async function run(target) {
       const elapsedMs = performance.now() - start;
       render(target, { limit, count: primes.length, elapsedMs, preview: primes.slice(0, 20) });
     } else {
-      const response = await fetch(`/api/primes?limit=${limit}`, { cache: 'no-store' });
+      const response = await fetch(`./api/primes?limit=${limit}`, { cache: 'no-store' });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || 'The server request failed.');
       render(target, result, performance.now() - start);

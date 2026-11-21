@@ -4,3 +4,6 @@ npm-debug.log*
 __pycache__/
 *.pyc
 /c/primes
+nohup.out
+.enf
+
