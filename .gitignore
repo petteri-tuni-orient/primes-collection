@@ -6,4 +6,6 @@ __pycache__/
 /c/primes
 nohup.out
 .enf
+target
+target/*
 
